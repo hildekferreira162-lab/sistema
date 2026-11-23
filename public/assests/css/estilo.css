@@ -1,51 +1,157 @@
-/* Reset básico */
-* {
-    box-sizing: border-box;
+{
     margin: 0;
     padding: 0;
-    }
-    body {
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f8fafc;
-    color: #334155;
-    }
-    /* Container da barra de navegação */
-    .navbar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: #1e293b;
-    padding: 1rem 2rem;
-    }
-    /* Links do menu */
-    .nav-link {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
 }
-/* Efeito ao passar o mouse */
-.nav-link:hover {
-color: #ffffff;
-background-color: #334155;
+
+/* Menu */
+nav {
+    background-color: #172554;
+    padding: 20px;
+    text-align: center;
 }
-/* Estado ativo (página atual) */
-.nav-link.active {
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* Conteúdo */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #334155;
+}
+
+/* Botão */
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.logout-form {
+margin-left: auto;
+}
+.logout-button {
+border: 0;
+background: transparent;
+font: inherit;
+cursor: pointer;
+}
+
+.tabela-estilizada {
+width: 100%;
+border-collapse: collapse; /* Une as bordas da tabela */
+margin: 20px 0;
+font-size: 16px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: left;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px 8px 0 0;
+overflow: hidden;
+}
+.tabela-estilizada thead tr {
+background-color: #009879;
 color: #ffffff;
-background-color: #0284c7;
+text-align: left;
+font-weight: bold;
+}
+.tabela-estilizada th,
+.tabela-estilizada td {
+padding: 12px 15px; /* Espaçamento interno (padding) */
+}
+.tabela-estilizada tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+.tabela-estilizada tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Efeito de listras zebradas */
+}
+.tabela-estilizada tbody tr:last-of-type {
+border-bottom: 2px solid #009879;
+}
+.tabela-estilizada tbody tr:hover {
+background-color: #f1f1f1; /* Efeito ao passar o mouse */
+}
+/* a partir daqui a formatação para o editar.php */
+.form-conteudo {
+width: min(100% - 32px, 680px);
+margin: 40px auto;
+padding: 32px;
+background-color: #fff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+font-family: Arial, sans-serif;
+}
+.form-conteudo__campo {
+margin-bottom: 22px;
+}
+.form-conteudo__label {
+display: block;
+margin-bottom: 8px;
+color: #1e293b;
+font-size: 15px;
 font-weight: 600;
 }
-/* Container do conteúdo da página */
-.container {
-max-width: 1100px;
-margin: 2rem auto;
-padding: 0 1.5rem;
-}
-.container h1 {
-margin-bottom: 0.75rem;
+.form-conteudo__input,
+.form-conteudo__textarea {
+box-sizing: border-box;
+width: 100%;
+padding: 12px 14px;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+background-color: #f8fafc;
 color: #0f172a;
+font: inherit;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-conteudo__input:focus,
+@media (max-width: 480px) {
+.form-conteudo {
+padding: 22px;
+}
+.form-conteudo__acoes {
+align-items: stretch;
+flex-direction: column;
+}
+.form-conteudo__botao,
+.form-conteudo__cancelar {
+text-align: center;
+}
 }
